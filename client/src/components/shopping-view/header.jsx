@@ -1,5 +1,5 @@
 import { HousePlug, LogOut, Menu, ShoppingCart, UserCog } from "lucide-react";
-import Logo from "../../assets/Logo_transparent.png";
+import Logo from "../../assets/Logo_transparent.webp";
 import {
   Link,
   useLocation,
