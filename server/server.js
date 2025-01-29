@@ -23,12 +23,13 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ FIX: Connect to MongoDB using Atlas URI from `.env`
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected successfully"))
   .catch((error) => {
     console.error("❌ MongoDB connection error:", error);
     process.exit(1); // Exit if DB fails to connect
   });
+
 
 // ✅ FIX: Proper CORS settings for frontend access
 app.use(
