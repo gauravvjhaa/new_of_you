@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
 import axios from "axios";
 import { Skeleton } from "../ui/skeleton";
+import API_BASE_URL from "../../config/api"; // ✅ Import API URL
 
 function ProductImageUpload({
   imageFile,
@@ -49,11 +50,12 @@ function ProductImageUpload({
     setImageLoadingState(true);
     const data = new FormData();
     data.append("my_file", imageFile);
+    
+    // ✅ Replace hardcoded URL with API_BASE_URL
     const response = await axios.post(
-      "http://localhost:5000/api/admin/products/upload-image",
+      `${API_BASE_URL}/api/admin/products/upload-image`, 
       data
     );
-    console.log(response, "response");
 
     if (response?.data?.success) {
       setUploadedImageUrl(response.data.result.url);
