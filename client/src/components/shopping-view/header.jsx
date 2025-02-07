@@ -35,33 +35,25 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 
 /* -----------------------------------------------
- * MenuItems component: remains mostly the same
+ * MenuItems component
  * ----------------------------------------------- */
 function MenuItems() {
   const navigate = useNavigate();
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
-
-  // Initialize activeDropdown state
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   function handleNavigate(getCurrentMenuItem) {
     sessionStorage.removeItem("filters");
     const currentFilter =
-      getCurrentMenuItem.id !== "home" &&
-      getCurrentMenuItem.id !== "products" &&
-      getCurrentMenuItem.id !== "search"
-        ? {
-            category: [getCurrentMenuItem.id],
-          }
+      getCurrentMenuItem.id !== "home"
+        ? { category: [getCurrentMenuItem.id] }
         : null;
 
     sessionStorage.setItem("filters", JSON.stringify(currentFilter));
 
     if (location.pathname.includes("listing") && currentFilter !== null) {
-      setSearchParams(
-        new URLSearchParams(`?category=${getCurrentMenuItem.id}`)
-      );
+      setSearchParams(new URLSearchParams(`?category=${getCurrentMenuItem.id}`));
     } else {
       navigate(getCurrentMenuItem.path);
     }
@@ -69,76 +61,68 @@ function MenuItems() {
 
   return (
     <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
-      {shoppingViewHeaderMenuItems.map((menuItem) => (
-        <div
-          key={menuItem.id}
-          className="relative"
-          onMouseEnter={() => setActiveDropdown(menuItem.id)}
-          onMouseLeave={() => setActiveDropdown(null)}
-        >
-          <Label
-            onClick={() => handleNavigate(menuItem)}
-            className="text-sm font-medium cursor-pointer"
-            tabIndex="0"
-            onFocus={() => setActiveDropdown(menuItem.id)}
-            onBlur={() => setActiveDropdown(null)}
+      {shoppingViewHeaderMenuItems
+        .filter((item) => item.id !== "products") // Remove 'products' if needed
+        .map((menuItem) => (
+          <div
+            key={menuItem.id}
+            className="relative"
+            onMouseEnter={() => setActiveDropdown(menuItem.id)}
+            onMouseLeave={() => setActiveDropdown(null)}
           >
-            {menuItem.label}
-          </Label>
-          {/* Dropdown Menu */}
-          {menuItem.subItems && (
-            <div
-              className={`absolute top-5 mt-1 w-40 bg-white border rounded shadow-lg z-10 ${
-                activeDropdown === menuItem.id
-                  ? "opacity-100 scale-100"
-                  : "opacity-0 scale-95 pointer-events-none"
-              }`}
-              role="menu"
-              aria-label={`${menuItem.label} submenu`}
+            <Label
+              onClick={() => handleNavigate(menuItem)}
+              className="text-sm font-medium cursor-pointer hover:text-primary transition-colors"
+              tabIndex="0"
+              onFocus={() => setActiveDropdown(menuItem.id)}
+              onBlur={() => setActiveDropdown(null)}
             >
-              {menuItem.subItems.map((subItem) => (
-                <Link
-                  to={subItem.path}
-                  key={subItem.id}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
-                >
-                  {subItem.label}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+              {menuItem.label}
+            </Label>
+
+            {menuItem.subItems && (
+              <div
+                className={`absolute top-5 mt-1 w-80 bg-white border rounded-lg shadow-xl z-10 transition-all duration-200 ${
+                  activeDropdown === menuItem.id
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-95 pointer-events-none"
+                }`}
+                role="menu"
+              >
+                <h3 className="text-lg font-semibold px-6 pt-4 pb-2 border-b">
+                  {menuItem.label} Collection
+                </h3>
+                <div className="grid grid-cols-2 gap-4 p-4">
+                  {menuItem.subItems.map((subItem) => (
+                    <Link
+                      to={subItem.path}
+                      key={subItem.id}
+                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 rounded-lg transition-colors"
+                    >
+                      <span className="ml-2">{subItem.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
     </nav>
   );
 }
 
 /* -----------------------------------------------
- * HeaderRightContent component:
- * Now includes searchQuery, handleSearch, and a form
+ * HeaderRightContent component
  * ----------------------------------------------- */
 function HeaderRightContent() {
   const { user } = useSelector((state) => state.auth);
   const { cartItems } = useSelector((state) => state.shopCart);
-
   const [openCartSheet, setOpenCartSheet] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   function handleLogout() {
     dispatch(logoutUser());
-  }
-
-  // Handle search submission
-  function handleSearch(e) {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // e.g. navigate to your listing route
-      navigate(`/shop/listing?search=${encodeURIComponent(searchQuery.trim())}`);
-    }
   }
 
   useEffect(() => {
@@ -149,23 +133,7 @@ function HeaderRightContent() {
 
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
-      {/* ------ Search form (Desktop) ------ */}
-      <form
-        onSubmit={handleSearch}
-        className="hidden lg:flex items-center gap-2"
-      >
-        <Input
-          placeholder="Search products..."
-          className="w-48"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-        <Button type="submit" variant="outline" size="icon">
-          <Search className="h-4 w-4" />
-          <span className="sr-only">Search</span>
-        </Button>
-      </form>
-
+      {/* Cart */}
       <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
         <Button
           onClick={() => setOpenCartSheet(true)}
@@ -185,7 +153,7 @@ function HeaderRightContent() {
         />
       </Sheet>
 
-      {/* If user is not logged in, show login button; if logged in, show avatar menu */}
+      {/* User Menu */}
       {!user ? (
         <Button onClick={() => navigate("/auth/login")}>
           <HousePlug className="h-4 w-4 mr-2" />
@@ -220,54 +188,45 @@ function HeaderRightContent() {
 }
 
 /* -----------------------------------------------
- * ShoppingHeader component:
- * (Mostly unchanged, except we keep the new
- * search form in the mobile Sheet as well if desired)
+ * ShoppingHeader component
  * ----------------------------------------------- */
 function ShoppingHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
+        {/* Left: Logo */}
         <Link to="/shop/home" className="flex items-center gap-2">
           <span className="w-36 h-36 top-[42px] left-[42px] overflow-hidden relative">
             <img src={Logo} alt="Logo" className="absolute w-10/12 h-auto" />
           </span>
         </Link>
 
-        {/* Mobile Menu Trigger */}
+        {/* Mobile Menu (includes mobile search) */}
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden">
               <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle header menu</span>
+              <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="w-full max-w-xs">
             <MenuItems />
-            {/* Mobile Search Form */}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault(); /* add your own logic if you want mobile search to navigate */
-              }}
-              className="mt-4 space-y-2"
-            >
+            {/* Mobile Search Form (remove if you don't want mobile search either) */}
+            <form className="mt-4 space-y-2">
               <Input placeholder="Search products..." />
               <Button type="submit" className="w-full">
                 Search
               </Button>
             </form>
-
-            {/* If you want the cart and user in the mobile sheet, you can place
-                <HeaderRightContent /> or a portion of it here. */}
           </SheetContent>
         </Sheet>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation (center) */}
         <div className="hidden lg:block">
           <MenuItems />
         </div>
 
-        {/* Right-side content (Search, Cart, User) */}
+        {/* Right Content (cart, user menu, etc.) */}
         <div className="hidden lg:block">
           <HeaderRightContent />
         </div>
