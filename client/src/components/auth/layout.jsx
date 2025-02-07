@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Logo from "../../assets/Logo_transparent.webp";
+import Logo from "../../assets/Logo_transparent.png";
 
 function AuthLayout() {
   return (

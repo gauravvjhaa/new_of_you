@@ -1,0 +1,174 @@
+./client/.gitignore: ASCII text
+./client/README.md: ASCII text
+./client/components.json: JSON text data
+./client/eslint.config.js: JavaScript source, ASCII text
+./client/index.html: HTML document, ASCII text
+./client/jsconfig.json: JSON text data
+./client/package-lock.json: JSON text data
+./client/package.json: JSON text data
+./client/postcss.config.js: JavaScript source, ASCII text
+./client/public/assets/1.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/2.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/3.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/4.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/5.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/6.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/7.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 6200x6353, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/8.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/9.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/10.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/account.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1920x500, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/banner-1.webp: RIFF (little-endian) data, Web/P image
+./client/public/assets/banner-2.webp: RIFF (little-endian) data, Web/P image
+./client/public/assets/banner-3.webp: RIFF (little-endian) data, Web/P image
+./client/public/assets/kids 1.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x667, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/kids 2.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x667, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/kids 3.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x1000, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/kids 4.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x1000, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/kids 6.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x667, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/Logo_transparent.webp: RIFF (little-endian) data, Web/P image
+./client/public/assets/new of you.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 500x500, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/react.svg: SVG Scalable Vector Graphics image
+./client/public/assets/vite.svg: SVG Scalable Vector Graphics image
+./client/public/assets/women 1.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 6720x4480, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/public/assets/women 2.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1500x1000, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/tailwind.config.js: JavaScript source, ASCII text
+./client/vite.config.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/App.css: ASCII text
+./client/src/App.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/assets/banner-1.webp: RIFF (little-endian) data, Web/P image
+./client/src/assets/banner-2.webp: RIFF (little-endian) data, Web/P image
+./client/src/assets/banner-3.webp: RIFF (little-endian) data, Web/P image
+./client/src/assets/react.svg: SVG Scalable Vector Graphics image
+./client/src/assets/10.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/6.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/9.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/8.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 800x800, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/1.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/2.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/3.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/4.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/5.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 2481x3509, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/7.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 6200x6353, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/account.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1920x500, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/new of you.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 500x500, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/women 1.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 6720x4480, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/women 2.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1500x1000, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/kids 1.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x667, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/kids 2.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x667, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/kids 3.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x1000, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/kids 4.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x1000, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/kids 6.webp: RIFF (little-endian) data, Web/P image, VP8 encoding, 1000x667, Scaling: [none]x[none], YUV color, decoders should clamp
+./client/src/assets/Logo_transparent.webp: RIFF (little-endian) data, Web/P image
+./client/src/assets/Logo_transparent_Black.png: PNG image data, 2000 x 1000, 8-bit/color RGBA, non-interlaced
+./client/src/components/admin-view/header.jsx: JavaScript source, ASCII text
+./client/src/components/admin-view/image-upload.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/admin-view/layout.jsx: JavaScript source, ASCII text
+./client/src/components/admin-view/order-details.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/admin-view/orders.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/admin-view/product-tile.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/admin-view/sidebar.jsx: JavaScript source, ASCII text
+./client/src/components/auth/layout.jsx: JavaScript source, ASCII text
+./client/src/components/common/check-auth.jsx: JavaScript source, ASCII text
+./client/src/components/common/form.jsx: JavaScript source, ASCII text
+./client/src/components/common/star-rating.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/shopping-view/address-card.jsx: JavaScript source, ASCII text
+./client/src/components/shopping-view/address.jsx: JavaScript source, ASCII text
+./client/src/components/shopping-view/cart-items-content.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/shopping-view/cart-wrapper.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/shopping-view/filter.jsx: JavaScript source, ASCII text
+./client/src/components/shopping-view/header.jsx: JavaScript source, ASCII text
+./client/src/components/shopping-view/layout.jsx: JavaScript source, ASCII text
+./client/src/components/shopping-view/order-details.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/shopping-view/orders.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/shopping-view/product-details.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/shopping-view/product-tile.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/components/shopping-view/ShoppingLayout.jsx: JavaScript source, ASCII text
+./client/src/components/ui/avatar.jsx: JavaScript source, ASCII text
+./client/src/components/ui/badge.jsx: JavaScript source, ASCII text
+./client/src/components/ui/button.jsx: JavaScript source, ASCII text
+./client/src/components/ui/card.jsx: JavaScript source, ASCII text
+./client/src/components/ui/checkbox.jsx: JavaScript source, ASCII text, with very long lines (311)
+./client/src/components/ui/dialog.jsx: JavaScript source, ASCII text, with very long lines (518)
+./client/src/components/ui/dropdown-menu.jsx: JavaScript source, ASCII text, with very long lines (448)
+./client/src/components/ui/input.jsx: JavaScript source, ASCII text, with very long lines (359)
+./client/src/components/ui/label.jsx: JavaScript source, ASCII text
+./client/src/components/ui/select.jsx: JavaScript source, ASCII text, with very long lines (462)
+./client/src/components/ui/separator.jsx: JavaScript source, ASCII text
+./client/src/components/ui/sheet.jsx: JavaScript source, ASCII text
+./client/src/components/ui/skeleton.jsx: JavaScript source, ASCII text
+./client/src/components/ui/table.jsx: JavaScript source, ASCII text
+./client/src/components/ui/tabs.jsx: JavaScript source, ASCII text, with very long lines (396)
+./client/src/components/ui/textarea.jsx: JavaScript source, ASCII text, with very long lines (303)
+./client/src/components/ui/toast.jsx: JavaScript source, ASCII text, with very long lines (606)
+./client/src/components/ui/toaster.jsx: JavaScript source, ASCII text
+./client/src/components/ui/use-toast.js: JavaScript source, ASCII text
+./client/src/config/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/config/api.js: JavaScript source, ASCII text
+./client/src/index.css: ASCII text
+./client/src/lib/utils.js: JavaScript source, ASCII text
+./client/src/main.jsx: JavaScript source, ASCII text
+./client/src/pages/admin-view/dashboard.jsx: JavaScript source, ASCII text
+./client/src/pages/admin-view/features.jsx: JavaScript source, ASCII text
+./client/src/pages/admin-view/orders.jsx: JavaScript source, ASCII text
+./client/src/pages/admin-view/products.jsx: JavaScript source, ASCII text
+./client/src/pages/auth/login.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/pages/auth/register.jsx: JavaScript source, ASCII text
+./client/src/pages/not-found/index.jsx: JavaScript source, ASCII text
+./client/src/pages/shopping-view/account.jsx: JavaScript source, ASCII text
+./client/src/pages/shopping-view/checkout.jsx: JavaScript source, Unicode text, UTF-8 text
+./client/src/pages/shopping-view/home.jsx: JavaScript source, ASCII text
+./client/src/pages/shopping-view/listing.jsx: JavaScript source, ASCII text
+./client/src/pages/shopping-view/payment-success.jsx: JavaScript source, ASCII text
+./client/src/pages/shopping-view/paypal-return.jsx: JavaScript source, ASCII text
+./client/src/pages/shopping-view/search.jsx: JavaScript source, ASCII text
+./client/src/pages/shopping-view/ShoppingHome.jsx: JavaScript source, ASCII text
+./client/src/pages/unauth-page/index.jsx: JavaScript source, ASCII text
+./client/src/store/admin/order-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/admin/products-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/auth-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/common-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/shop/address-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/shop/cart-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/shop/order-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/shop/products-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/shop/review-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/shop/search-slice/index.js: JavaScript source, Unicode text, UTF-8 text
+./client/src/store/store.js: JavaScript source, ASCII text
+./client/src/utils/localStorageUtils.js: JavaScript source, ASCII text
+./client/.env: ASCII text
+./server/.gitignore: ASCII text
+./server/controllers/admin/order-controller.js: JavaScript source, ASCII text
+./server/controllers/admin/products-controller.js: JavaScript source, ASCII text
+./server/controllers/auth/auth-controller.js: JavaScript source, ASCII text
+./server/controllers/common/feature-controller.js: JavaScript source, ASCII text
+./server/controllers/shop/address-controller.js: JavaScript source, ASCII text
+./server/controllers/shop/cart-controller.js: JavaScript source, ASCII text
+./server/controllers/shop/order-controller.js: JavaScript source, ASCII text
+./server/controllers/shop/product-review-controller.js: JavaScript source, ASCII text
+./server/controllers/shop/products-controller.js: JavaScript source, ASCII text
+./server/controllers/shop/search-controller.js: JavaScript source, ASCII text
+./server/helpers/cloudinary.js: JavaScript source, ASCII text
+./server/helpers/paypal.js: JavaScript source, ASCII text
+./server/models/Address.js: JavaScript source, ASCII text
+./server/models/Cart.js: JavaScript source, ASCII text
+./server/models/Feature.js: JavaScript source, ASCII text
+./server/models/Order.js: JavaScript source, ASCII text
+./server/models/Product.js: JavaScript source, ASCII text
+./server/models/Review.js: JavaScript source, ASCII text
+./server/models/User.js: JavaScript source, ASCII text
+./server/package-lock.json: JSON text data
+./server/package.json: JSON text data
+./server/routes/admin/order-routes.js: JavaScript source, ASCII text
+./server/routes/admin/products-routes.js: JavaScript source, ASCII text
+./server/routes/auth/auth-routes.js: JavaScript source, ASCII text
+./server/routes/common/feature-routes.js: JavaScript source, ASCII text
+./server/routes/shop/address-routes.js: JavaScript source, ASCII text
+./server/routes/shop/cart-routes.js: JavaScript source, ASCII text
+./server/routes/shop/order-routes.js: JavaScript source, ASCII text
+./server/routes/shop/products-routes.js: JavaScript source, ASCII text
+./server/routes/shop/review-routes.js: JavaScript source, ASCII text
+./server/routes/shop/search-routes.js: JavaScript source, ASCII text
+./server/server.js: JavaScript source, Unicode text, UTF-8 text
+./server/.env: ASCII text
+./file_list.txt: ASCII text
