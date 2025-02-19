@@ -38,8 +38,7 @@ const categoriesWithCarousel = [
 ];
 
 function ShoppingHome() {
-  const [currentSlideWomen, setCurrentSlideWomen] = useState(0);
-  const [currentSlideKids, setCurrentSlideKids] = useState(0);
+  const [currentSlides, setCurrentSlides] = useState({ women: 0, kids: 0 });
   const [hoveredCategory, setHoveredCategory] = useState(null);
 
   const { productList, productDetails } = useSelector(
@@ -51,26 +50,15 @@ function ShoppingHome() {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  // Handle "Women" carousel
+  // Handle carousel sync for "Women" and "Kids"
   useEffect(() => {
-    if (hoveredCategory !== "women") {
+    if (hoveredCategory !== "women" && hoveredCategory !== "kids") {
       const timer = setInterval(() => {
-        setCurrentSlideWomen(
-          (prev) => (prev + 1) % categoriesWithCarousel[0].images.length
-        );
-      }, 1000);
-      return () => clearInterval(timer);
-    }
-  }, [hoveredCategory]);
-
-  // Handle "Kids" carousel
-  useEffect(() => {
-    if (hoveredCategory !== "kids") {
-      const timer = setInterval(() => {
-        setCurrentSlideKids(
-          (prev) => (prev + 1) % categoriesWithCarousel[1].images.length
-        );
-      }, 1000);
+        setCurrentSlides((prev) => ({
+          women: (prev.women + 1) % categoriesWithCarousel[0].images.length,
+          kids: (prev.kids + 1) % categoriesWithCarousel[1].images.length,
+        }));
+      }, 2000);
       return () => clearInterval(timer);
     }
   }, [hoveredCategory]);
@@ -121,28 +109,35 @@ function ShoppingHome() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Shop by category</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="md:grid grid-cols md:grid-cols-2 lg:grid-cols-2 gap-4">
             {categoriesWithCarousel.map((category, index) => (
               <Card
                 key={category.id}
                 onMouseEnter={() => setHoveredCategory(category.id)}
                 onMouseLeave={() => setHoveredCategory(null)}
                 onClick={() => handleNavigateToListingPage(category)}
-                className="cursor-pointer hover:shadow-lg transition-shadow"
+                className="cursor-pointer hover:shadow-lg transition-shadow h-full"
               >
                 <CardContent className="flex flex-col items-center justify-center p-6">
-                  <div className="relative w-full h-80 overflow-hidden mb-4">
+                  <span
+                    className="font-medium text-4xl text-gray-900 text-center mb-4"
+                    style={{ fontFamily: '"Fleur De Leah", serif' }}
+                    >{category.label}</span>
+                  <div className="relative w-full h-screen overflow-hidden">
                     <img
                       src={
                         category.id === "women"
-                          ? category.images[currentSlideWomen]
-                          : category.images[currentSlideKids]
+                          ? category.images[currentSlides.women]
+                          : category.images[currentSlides.kids]
                       }
                       alt={`${category.label} carousel`}
-                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-2000 transform translate-x-0 ease-in-out"
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
+                      style={{
+                        animation: 'fadeInOut 1s ease-in-out infinite',
+                        opacity: hoveredCategory === category.id ? 1 : 0.8,
+                      }}
                     />
                   </div>
-                  <span className="font-bold text-center">{category.label}</span>
                 </CardContent>
               </Card>
             ))}
